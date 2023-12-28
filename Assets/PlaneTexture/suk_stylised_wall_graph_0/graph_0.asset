@@ -147,7 +147,10 @@ MonoBehaviour:
   EnablePhysicalSize: 0
   Thumbnail: 
   HasThumbnail: 0
-  CurrentStatePreset: 
+  CurrentStatePreset: " <sbspreset pkgurl=\"pkg://Suk_Stylised_Wall\" label=\"\"
+    >\n  <presetinput identifier=\"$outputsize\" uid=\"3647473986\" type=\"8\" value=\"10,10\"
+    />\n  <presetinput identifier=\"Y_Tiling\" uid=\"2986485877\" type=\"4\" value=\"12\"
+    />\n </sbspreset>\n"
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
@@ -236,7 +239,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 4
           WidgetType: 1
-        Data: 7
+        Data: 12
         NumericalDescription:
           DefaultValue: 7
           MinValue: 1

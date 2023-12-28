@@ -22,6 +22,11 @@ TagManager:
   - Orange
   - Cupcake
   - Banana
+  - ShopBurger
+  - ShopApple
+  - ShopCupcake
+  - ShopOrange
+  - CandyBox
   layers:
   - Default
   - TransparentFX

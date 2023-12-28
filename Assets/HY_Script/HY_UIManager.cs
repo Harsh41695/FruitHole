@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class HY_UIManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class HY_UIManager : MonoBehaviour
     [SerializeField]
     GameObject timeUpPanel,fireButtonPanel,homeScreenPanel,settingPanel,
         shopPanel,skinPanel,downPanel,foodSkinPanel,skinChangePanel,gameOverPanel,ScorePanel,
-        upgradePanel,revivePanel,stagePanel;
+        upgradePanel,stagePanel;
     float time;
     [SerializeField]
     GameObject[] fireHealthyFood, fireUnHealthyFood;
@@ -26,16 +27,17 @@ public class HY_UIManager : MonoBehaviour
         skinActiveBtn, skinDeactiveBtn;
     public bool canRun, canSpawn;
     public bool leftRightMovementActive = false;
-    [SerializeField]
-    int minutes = 1;
-    [SerializeField]
+  
+    public int minutes = 1;
+  
     public float seconds = 60;
     public bool timeUp = false;
     [SerializeField]
     Button junkFoodThrowBtn, fruitThrowBtn,noThanksBtn;
     [SerializeField]
-    AudioClip clickSound;
+    AudioClip clickSound,thorwBtn;
     float coinInFloat,diamondInFloat;
+    bool canActivePanel = true;
     private void Awake()
     {
         if (instance == null)
@@ -63,7 +65,6 @@ public class HY_UIManager : MonoBehaviour
         stagePanel.SetActive(true);
 
     }
-   
     void Update()
     { 
         healthyFoodCollectTxt.text = healthyFood.ToString();
@@ -117,9 +118,15 @@ public class HY_UIManager : MonoBehaviour
             fruitThrowBtn.interactable = false;
             if (GameManager.instance.canGameOverPanelActive == true)
             {
-                ScorePanel.SetActive(true);
-                gameOverPanel.SetActive(true);
-                Invoke("ActivateNoThankButton", 5);
+                if (canActivePanel == true)
+                {
+                    ScorePanel.SetActive(true);
+                    gameOverPanel.SetActive(true);
+                    Invoke("ActivateNoThankButton", 5);
+                    canActivePanel = false;
+                    interstitialUnity.instance.ShowAd();
+                }
+               
                 //ActivateNoThankButton();
                
             }
@@ -129,7 +136,6 @@ public class HY_UIManager : MonoBehaviour
         CoinTxtOnDamage.text = GameManager.instance.coinsUpdater.ToString();
         stageTxt.text = "STAGE -" + GameManager.instance.currentGameLVL.ToString();
     }
-
     void CoinUpdater()
     {
         coinInFloat = GameManager.instance.coins;
@@ -175,9 +181,11 @@ public class HY_UIManager : MonoBehaviour
         {
             Instantiate(fireHealthyFood[Random.Range(0, fireHealthyFood.Length)], fireObjSpawnPos.position,
            Quaternion.identity);
+           
             healthyFood--;
         }
-       
+        HY_AudioManager.instance.PlayAudioEffectOnce(thorwBtn);
+
     }
 
     public void ClickUnHealthyFoodFire()
@@ -188,7 +196,8 @@ public class HY_UIManager : MonoBehaviour
            Quaternion.identity);
             unHealthyFood--;
         }
-       
+        HY_AudioManager.instance.PlayAudioEffectOnce(thorwBtn);
+
     }
     //                                              Timeup funtion
     void TimerUpdate()
@@ -223,12 +232,6 @@ public class HY_UIManager : MonoBehaviour
     void ActivateNoThankButton()
     {
         noThanksBtn.gameObject.SetActive(true);
-
-        ////time = 0;
-        //time += Time.deltaTime;
-        //if (time > 6)
-        //{
-        //}
     }
 
     public void OnClickPlayActiveBtn()
@@ -245,6 +248,9 @@ public class HY_UIManager : MonoBehaviour
     public void OnPlayAtiveBtnClick()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+       // HY_SaveSystem.instance.SaveData("FirstTime", 1);
+     
+        Time.timeScale = 1;
         downPanel.SetActive(false);
         settingPanel.SetActive(false);
         homeScreenPanel.SetActive(false);
@@ -318,16 +324,10 @@ public class HY_UIManager : MonoBehaviour
     }
     public void OnSettingCrossBtn()
     {
-       // homeScreenPanel.SetActive(true);
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
         settingPanel.SetActive(false);
         Time.timeScale = HY_HoleBehaviour.instance.currentTimeScale;
-        //skinActiveBtn.SetActive(false);
-        //skinDeactiveBtn.SetActive(true);
-        //shopActiveBtn.SetActive(false);
-        //shopDeactiveBtn.SetActive(true);
-        //playActiveBtn.SetActive(true);
-        //playDeactiveBtn.SetActive(false);
-
+       
     }
 
     public void OnFoodSkinChangeBtnClick()

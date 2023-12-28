@@ -27,6 +27,7 @@ public class HY_HoleBehaviour : MonoBehaviour
     [SerializeField]
     float positiveXVal=2.5f,negativeXVal=-2.5f;
     public float currentTimeScale=1;
+    float powerLevel=0;
     private void Awake()
     {
         if (instance == null)
@@ -54,9 +55,15 @@ public class HY_HoleBehaviour : MonoBehaviour
     }
     public void ChangeSize()
     {
-        transform.localScale = new Vector3(size, size, size);
-        transform.position = new Vector3(transform.position.x, transform.position.y-0.019f,
-            transform.position.z);
+       
+        if (transform.localScale.y <= 2.5)
+        {
+            minPoints = 0;
+            transform.localScale = new Vector3(size, size, size);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.019f,
+                transform.position.z);
+
+        }
         Time.timeScale += 0.2f;
         currentTimeScale = Time.timeScale;
     }
@@ -78,11 +85,15 @@ public class HY_HoleBehaviour : MonoBehaviour
             leftRightMoveSpeed *= -1;
         }
     }
+    public void IncreacePowerLevel(float power)
+    {
+        powerLevel += power;
+    }
     public void AddPoint(float points)
     {
-        resizeScore += points;
-        resizeScore += points;
-        minPoints += points;
+        resizeScore += (points+powerLevel);
+        resizeScore += (points + powerLevel);
+        minPoints += (points + powerLevel);
         img.fillAmount = (minPoints /maxPoints);
 
         if (minPoints >= maxPoints)
@@ -99,7 +110,11 @@ public class HY_HoleBehaviour : MonoBehaviour
            
         }
     }
-    
+    public void IncreaseSizeFromReward()
+    {
+        size += 0.5f;
+        ChangeSize();
+    }
     void SkinUpdater(int index)
     {
         switch (index)

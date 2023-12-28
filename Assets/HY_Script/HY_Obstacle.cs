@@ -135,7 +135,7 @@ public class HY_Obstacle : MonoBehaviour
     }
     private void UnhealthyFoodCount()
     {
-        if (gameObject.tag == "Burger" || gameObject.tag == "Cupcake")
+        if (gameObject.tag == "Burger" || gameObject.tag == "Cupcake"||gameObject.tag=="CandyBox")
         {
             HY_UIManager.instance.unHealthyFood++;
         }

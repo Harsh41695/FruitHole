@@ -22,7 +22,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Button bugerClaimBtn, orangeClaimBtm, CupcakeClaimBtn, appleClaimBtn;
     public bool isVictory, isDefeat;
-    int resetVal=250;
+    int coinResetVal=250, timeResetVal=1;
+    [SerializeField]
+    AudioClip winSound, looseSound;
+    [SerializeField]
+    GameObject revivePanel;
+    bool canRevivePanelActive=true, startTimer=true;
+
     // float coinsUpdater;
 
     private void Awake()
@@ -124,16 +130,35 @@ public class GameManager : MonoBehaviour
     {
         //Win Animation Play. and after some time game over panel will open.
         print("WIN Animation");
+        HY_AudioManager.instance.PlayAudioEffectOnce(winSound);
         isVictory = true;    
         isWon = true;
-        time+= Time.deltaTime;
-        statusTxt.text = status;
-        HY_SaveSystem.instance.SaveData("CurrentTimerCoins", resetVal);
-        if (time > 5)
+        if (startTimer == true)
         {
+            time += Time.deltaTime;
+        }
+       
+        statusTxt.text = status;
+        //Timer coin and LVL
+        HY_SaveSystem.instance.SaveData("CurrentTimerCoinReq", coinResetVal);
+        HY_SaveSystem.instance.SaveData("CurrentTimerLvl", timeResetVal);
+
+        //Power coin and LVL
+        HY_SaveSystem.instance.SaveData("CurrentPowerCoinReq", coinResetVal);
+        HY_SaveSystem.instance.SaveData("CurrentPowerLvl", timeResetVal);
+
+        //Size coin and LVL
+        HY_SaveSystem.instance.SaveData("CurrentSizeCoinReq", coinResetVal);
+        HY_SaveSystem.instance.SaveData("CurrentSizeLvl", timeResetVal);
+
+        if (time > 5&&startTimer==true)
+        {
+           // revivePanel.SetActive(false);
             canGameOverPanelActive = true;
             canScorePanelGo = true;
+            startTimer = false;
             time= 0;
+            
         }
     }
     
@@ -141,17 +166,24 @@ public class GameManager : MonoBehaviour
     {
         //Loose Animation Will play and after some time game over panel will open.
         print("Loose Animation");
+        HY_AudioManager.instance.PlayAudioEffectOnce(looseSound);
         isDefeat = true;
         statusTxt.text = status;
-        time += Time.deltaTime;
-        //time= 0;
-        if (time > 5)
+        if (startTimer == true)
         {
-            canGameOverPanelActive = true;
-            canScorePanelGo = true;
-            time = 0;
+            time += Time.deltaTime;
 
         }
+        //time= 0;
+        if (time > 5&&startTimer==true)
+        {
+
+            canGameOverPanelActive = true;
+            canScorePanelGo = true;
+            startTimer = false;
+            startTimer = false;
+        }
+       
     }
 
     public void NoThanksGameOverBtn()
@@ -162,6 +194,14 @@ public class GameManager : MonoBehaviour
         {
             currentGameLVL++;
         }
+        //interstitialUnity.instance.ShowAd();
+    }
+
+    public void ReviveNoThanksBtn()
+    {
+        revivePanel.SetActive(false);
+        canGameOverPanelActive = true;
+        canScorePanelGo = true;
     }
     public void SavingAllData()
     {

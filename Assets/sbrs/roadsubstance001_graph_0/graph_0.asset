@@ -1,0 +1,1618 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed5864476f84ce4b85454db09ca4eaa, type: 3}
+  m_Name: graph_0
+  m_EditorClassIdentifier: 
+  AssetPath: Assets/Fast food/Fast food_cent/sbrs/roadsubstance001.sbsar
+  RawData: {fileID: -244192453324840774, guid: 06ba0a98864577042a2709de0317e684, type: 3}
+  Name: graph_0
+  IsRoot: 1
+  FlagedForDelete: 0
+  GUID: e49a75e4-99c8-4848-83e4-1daf3f2b38a3
+  Index: 0
+  Input:
+  - rid: 661270027061166125
+  - rid: 661270027061166126
+  - rid: 661270027061166127
+  - rid: 661270027061166128
+  - rid: 661270027061166129
+  - rid: 661270027061166130
+  - rid: 661270027061166131
+  - rid: 661270027061166132
+  - rid: 661270027061166133
+  - rid: 661270027061166134
+  - rid: 661270027061166135
+  - rid: 661270027061166136
+  - rid: 661270027061166137
+  - rid: 661270027061166138
+  - rid: 661270027061166139
+  - rid: 661270027061166140
+  - rid: 661270027061166141
+  - rid: 661270027061166142
+  - rid: 661270027061166143
+  - rid: 661270027061166144
+  - rid: 661270027061166145
+  - rid: 661270027061166146
+  - rid: 661270027061166147
+  - rid: 661270027061166148
+  - rid: 661270027061166149
+  - rid: 661270027061166150
+  - rid: 661270027061166151
+  - rid: 661270027061166152
+  - rid: 661270027061166153
+  - rid: 661270027061166154
+  - rid: 661270027061166155
+  - rid: 661270027061166156
+  - rid: 661270027061166157
+  - rid: 661270027061166158
+  - rid: 661270027061166159
+  - rid: 661270027061166160
+  - rid: 661270027061166161
+  - rid: 661270027061166162
+  - rid: 661270027061166163
+  - rid: 661270027061166164
+  - rid: 661270027061166165
+  - rid: 661270027061166166
+  - rid: 661270027061166167
+  - rid: 661270027061166168
+  - rid: 661270027061166169
+  - rid: 661270027061166170
+  - rid: 661270027061166171
+  - rid: 661270027061166172
+  - rid: 661270027061166173
+  - rid: 661270027061166174
+  - rid: 661270027061166175
+  - rid: 661270027061166176
+  - rid: 661270027061166177
+  - rid: 661270027061166178
+  - rid: 661270027061166179
+  - rid: 661270027061166180
+  - rid: 661270027061166181
+  - rid: 661270027061166182
+  - rid: 661270027061166183
+  - rid: 661270027061166184
+  - rid: 661270027061166185
+  - rid: 661270027061166186
+  - rid: 661270027061166187
+  - rid: 661270027061166188
+  - rid: 661270027061166189
+  - rid: 661270027061166190
+  - rid: 661270027061166191
+  - rid: 661270027061166192
+  - rid: 661270027061166193
+  - rid: 661270027061166194
+  Output:
+  - Index: 0
+    VirtualOutputIndex: 4
+    Description:
+      Identifier: normal
+      Label: normal
+      Index: 0
+      Type: 8
+      Channel: normal
+    OutputTexture: {fileID: 2800000, guid: bf5694b00d4910c4c802770989c5ca06, type: 3}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 0
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _BumpMap
+  - Index: 1
+    VirtualOutputIndex: 5
+    Description:
+      Identifier: roughness
+      Label: roughness
+      Index: 1
+      Type: 8
+      Channel: roughness
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _RoughnessMap
+  - Index: 2
+    VirtualOutputIndex: 6
+    Description:
+      Identifier: height
+      Label: height
+      Index: 2
+      Type: 8
+      Channel: height
+    OutputTexture: {fileID: 2800000, guid: 3f5395e0b0df05d44a06dfccd6433113, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _ParallaxMap
+  - Index: 3
+    VirtualOutputIndex: 7
+    Description:
+      Identifier: basecolor
+      Label: basecolor
+      Index: 3
+      Type: 8
+      Channel: baseColor
+    OutputTexture: {fileID: 2800000, guid: b0f59374d01958d488df9041a8082569, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: roughness
+    InvertAssignedAlpha: 1
+    Flags: 0
+    MaterialTextureTarget: _BaseMap
+  HasPhysicalSize: 0
+  PhysicalSize: {x: 0, y: 0, z: 0}
+  EnablePhysicalSize: 0
+  Thumbnail: 
+  HasThumbnail: 0
+  CurrentStatePreset: 
+  IsRuntimeOnly: 0
+  GenerateAllOutputs: 0
+  GenerateAllMipmaps: 1
+  OutputMaterial: {fileID: 2100000, guid: 9daca4a104e42ff4ca90d8f78f1fc2f9, type: 2}
+  DefaultPreset: " <sbspreset pkgurl=\"pkg://Road\" label=\"\" >\n  <presetinput
+    identifier=\"$outputsize\" uid=\"2260902733\" type=\"8\" value=\"10,10\" />\n
+    </sbspreset>\n"
+  MaterialShader: Universal Render Pipeline/Lit
+  RenderTextures: 0
+  OutputRemaped: 0
+  Presets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 661270027061166125
+      type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 0
+        Description:
+          Identifier: $outputsize
+          Label: $outputsize
+          GuiGroup: 
+          GuiDescription: 
+          Type: 5
+          WidgetType: 0
+        Data: {x: 10, y: 10}
+        NumericalDescription:
+          DefaultValue: {x: 8, y: 8}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 1, y: 1}
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166126
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 1
+        Description:
+          Identifier: $randomseed
+          Label: $randomseed
+          GuiGroup: 
+          GuiDescription: 
+          Type: 4
+          WidgetType: 0
+        Data: 0
+        NumericalDescription:
+          DefaultValue: 0
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166127
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 2
+        Description:
+          Identifier: normal_intensity
+          Label: Normal Intensity
+          GuiGroup: 
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 10
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166128
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 3
+        Description:
+          Identifier: Patches_X
+          Label: X Amount
+          GuiGroup: Patches
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 20
+        NumericalDescription:
+          DefaultValue: 20
+          MinValue: 1
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166129
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 4
+        Description:
+          Identifier: Patches_Y
+          Label: Y Amount
+          GuiGroup: Patches
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 12
+        NumericalDescription:
+          DefaultValue: 12
+          MinValue: 1
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166130
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 5
+        Description:
+          Identifier: Patches_Cover_Lines
+          Label: Cover Road Lines
+          GuiGroup: Patches
+          GuiDescription: 
+          Type: 4
+          WidgetType: 4
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166131
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 6
+        Description:
+          Identifier: Patches_Scale
+          Label: Scale
+          GuiGroup: Patches
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 2
+        NumericalDescription:
+          DefaultValue: 2
+          MinValue: 0
+          MaxValue: 2
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166132
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 7
+        Description:
+          Identifier: Patches_Random_Mask
+          Label: Random Mask
+          GuiGroup: Patches
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.85
+        NumericalDescription:
+          DefaultValue: 0.85
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 1
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166133
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 8
+        Description:
+          Identifier: Asphalt_Main_basic_scale
+          Label: Scale
+          GuiGroup: Asphalt/Main
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 64
+        NumericalDescription:
+          DefaultValue: 64
+          MinValue: 16
+          MaxValue: 256
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166134
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 9
+        Description:
+          Identifier: Asphalt_Main_Cracks_cracks_scale
+          Label: Scale
+          GuiGroup: Asphalt/Main/Cracks
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 8
+        NumericalDescription:
+          DefaultValue: 8
+          MinValue: 1
+          MaxValue: 16
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166135
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 10
+        Description:
+          Identifier: Asphalt_Main_Cracks_cracks_strength
+          Label: Strength
+          GuiGroup: Asphalt/Main/Cracks
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.25
+        NumericalDescription:
+          DefaultValue: 0.25
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166136
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 11
+        Description:
+          Identifier: Asphalt_Main_Dirt_Dirt_Hue
+          Label: Hue
+          GuiGroup: Asphalt/Main/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166137
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 12
+        Description:
+          Identifier: Asphalt_Main_Dirt_Dirt_Saturation
+          Label: Saturation
+          GuiGroup: Asphalt/Main/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166138
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 13
+        Description:
+          Identifier: Asphalt_Main_Dirt_Dirt_Lightness
+          Label: Lightness
+          GuiGroup: Asphalt/Main/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166139
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 14
+        Description:
+          Identifier: Asphalt_Main_Dirt_Dirt_Roughness
+          Label: Roughness
+          GuiGroup: Asphalt/Main/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166140
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 15
+        Description:
+          Identifier: Asphalt_Main_Asphalt_spots_fine
+          Label: Fine Spots
+          GuiGroup: Asphalt/Main/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.85
+        NumericalDescription:
+          DefaultValue: 0.85
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166141
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 16
+        Description:
+          Identifier: Asphalt_Main_Asphalt_spots_large
+          Label: Large Spots
+          GuiGroup: Asphalt/Main/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166142
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 17
+        Description:
+          Identifier: Asphalt_Main_Asphalt_Asphalt_Hue
+          Label: Asphalt_Hue
+          GuiGroup: Asphalt/Main/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166143
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 18
+        Description:
+          Identifier: Asphalt_Main_Asphalt_Asphalt_Saturation
+          Label: Asphalt_Saturation
+          GuiGroup: Asphalt/Main/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166144
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 19
+        Description:
+          Identifier: Asphalt_Main_Asphalt_Asphalt_Lightness
+          Label: Asphalt_Lightness
+          GuiGroup: Asphalt/Main/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166145
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 20
+        Description:
+          Identifier: Asphalt_Patch_1_basic_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 1
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 30
+        NumericalDescription:
+          DefaultValue: 30
+          MinValue: 16
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166146
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 21
+        Description:
+          Identifier: Asphalt_Patch_1_Cracks_cracks_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 1/Cracks
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 8
+        NumericalDescription:
+          DefaultValue: 8
+          MinValue: 1
+          MaxValue: 16
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166147
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 22
+        Description:
+          Identifier: Asphalt_Patch_1_Cracks_cracks_strength
+          Label: Strength
+          GuiGroup: Asphalt/Patch 1/Cracks
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.54
+        NumericalDescription:
+          DefaultValue: 0.54
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166148
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 23
+        Description:
+          Identifier: Asphalt_Patch_1_Dirt_Dirt_Hue
+          Label: Hue
+          GuiGroup: Asphalt/Patch 1/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166149
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 24
+        Description:
+          Identifier: Asphalt_Patch_1_Dirt_Dirt_Saturation
+          Label: Saturation
+          GuiGroup: Asphalt/Patch 1/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166150
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 25
+        Description:
+          Identifier: Asphalt_Patch_1_Dirt_Dirt_Lightness
+          Label: Lightness
+          GuiGroup: Asphalt/Patch 1/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166151
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 26
+        Description:
+          Identifier: Asphalt_Patch_1_Dirt_Dirt_Roughness
+          Label: Roughness
+          GuiGroup: Asphalt/Patch 1/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166152
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 27
+        Description:
+          Identifier: Asphalt_Patch_1_Asphalt_spots_fine
+          Label: Fine Spots
+          GuiGroup: Asphalt/Patch 1/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.73
+        NumericalDescription:
+          DefaultValue: 0.73
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166153
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 28
+        Description:
+          Identifier: Asphalt_Patch_1_Asphalt_spots_large
+          Label: Large Spots
+          GuiGroup: Asphalt/Patch 1/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.44
+        NumericalDescription:
+          DefaultValue: 0.44
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166154
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 29
+        Description:
+          Identifier: Asphalt_Patch_1_Asphalt_Asphalt_Hue
+          Label: Asphalt_Hue
+          GuiGroup: Asphalt/Patch 1/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166155
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 30
+        Description:
+          Identifier: Asphalt_Patch_1_Asphalt_Asphalt_Saturation
+          Label: Asphalt_Saturation
+          GuiGroup: Asphalt/Patch 1/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.46
+        NumericalDescription:
+          DefaultValue: 0.46
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166156
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 31
+        Description:
+          Identifier: Asphalt_Patch_1_Asphalt_Asphalt_Lightness
+          Label: Asphalt_Lightness
+          GuiGroup: Asphalt/Patch 1/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.47
+        NumericalDescription:
+          DefaultValue: 0.47
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166157
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 32
+        Description:
+          Identifier: Asphalt_Patch_2_basic_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 2
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 51
+        NumericalDescription:
+          DefaultValue: 51
+          MinValue: 16
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166158
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 33
+        Description:
+          Identifier: Asphalt_Patch_2_Cracks_cracks_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 2/Cracks
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 8
+        NumericalDescription:
+          DefaultValue: 8
+          MinValue: 1
+          MaxValue: 16
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166159
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 34
+        Description:
+          Identifier: Asphalt_Patch_2_Cracks_cracks_strength
+          Label: Strength
+          GuiGroup: Asphalt/Patch 2/Cracks
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.37
+        NumericalDescription:
+          DefaultValue: 0.37
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166160
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 35
+        Description:
+          Identifier: Asphalt_Patch_2_Dirt_Dirt_Hue
+          Label: Hue
+          GuiGroup: Asphalt/Patch 2/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166161
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 36
+        Description:
+          Identifier: Asphalt_Patch_2_Dirt_Dirt_Saturation
+          Label: Saturation
+          GuiGroup: Asphalt/Patch 2/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166162
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 37
+        Description:
+          Identifier: Asphalt_Patch_2_Dirt_Dirt_Lightness
+          Label: Lightness
+          GuiGroup: Asphalt/Patch 2/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166163
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 38
+        Description:
+          Identifier: Asphalt_Patch_2_Dirt_Dirt_Roughness
+          Label: Roughness
+          GuiGroup: Asphalt/Patch 2/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166164
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 39
+        Description:
+          Identifier: Asphalt_Patch_2_Asphalt_spots_fine
+          Label: Fine Spots
+          GuiGroup: Asphalt/Patch 2/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.29
+        NumericalDescription:
+          DefaultValue: 0.29
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166165
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 40
+        Description:
+          Identifier: Asphalt_Patch_2_Asphalt_spots_large
+          Label: Large Spots
+          GuiGroup: Asphalt/Patch 2/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.83
+        NumericalDescription:
+          DefaultValue: 0.83
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166166
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 41
+        Description:
+          Identifier: Asphalt_Patch_2_Asphalt_Asphalt_Hue
+          Label: Asphalt_Hue
+          GuiGroup: Asphalt/Patch 2/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166167
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 42
+        Description:
+          Identifier: Asphalt_Patch_2_Asphalt_Asphalt_Saturation
+          Label: Asphalt_Saturation
+          GuiGroup: Asphalt/Patch 2/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.34
+        NumericalDescription:
+          DefaultValue: 0.34
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166168
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 43
+        Description:
+          Identifier: Asphalt_Patch_2_Asphalt_Asphalt_Lightness
+          Label: Asphalt_Lightness
+          GuiGroup: Asphalt/Patch 2/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.46
+        NumericalDescription:
+          DefaultValue: 0.46
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166169
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 44
+        Description:
+          Identifier: Asphalt_Patch_3_basic_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 3
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 32
+        NumericalDescription:
+          DefaultValue: 32
+          MinValue: 16
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166170
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 45
+        Description:
+          Identifier: Asphalt_Patch_3_Cracks_cracks_scale
+          Label: Scale
+          GuiGroup: Asphalt/Patch 3/Cracks
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 8
+        NumericalDescription:
+          DefaultValue: 8
+          MinValue: 1
+          MaxValue: 16
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166171
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 46
+        Description:
+          Identifier: Asphalt_Patch_3_Cracks_cracks_strength
+          Label: Strength
+          GuiGroup: Asphalt/Patch 3/Cracks
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.7
+        NumericalDescription:
+          DefaultValue: 0.7
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166172
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 47
+        Description:
+          Identifier: Asphalt_Patch_3_Dirt_Dirt_Hue
+          Label: Hue
+          GuiGroup: Asphalt/Patch 3/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166173
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 48
+        Description:
+          Identifier: Asphalt_Patch_3_Dirt_Dirt_Saturation
+          Label: Saturation
+          GuiGroup: Asphalt/Patch 3/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166174
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 49
+        Description:
+          Identifier: Asphalt_Patch_3_Dirt_Dirt_Lightness
+          Label: Lightness
+          GuiGroup: Asphalt/Patch 3/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166175
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 50
+        Description:
+          Identifier: Asphalt_Patch_3_Dirt_Dirt_Roughness
+          Label: Roughness
+          GuiGroup: Asphalt/Patch 3/Dirt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166176
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 51
+        Description:
+          Identifier: Asphalt_Patch_3_Asphalt_spots_fine
+          Label: Fine Spots
+          GuiGroup: Asphalt/Patch 3/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.87
+        NumericalDescription:
+          DefaultValue: 0.87
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166177
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 52
+        Description:
+          Identifier: Asphalt_Patch_3_Asphalt_spots_large
+          Label: Large Spots
+          GuiGroup: Asphalt/Patch 3/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.93
+        NumericalDescription:
+          DefaultValue: 0.93
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166178
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 53
+        Description:
+          Identifier: Asphalt_Patch_3_Asphalt_Asphalt_Hue
+          Label: Asphalt_Hue
+          GuiGroup: Asphalt/Patch 3/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5
+        NumericalDescription:
+          DefaultValue: 0.5
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166179
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 54
+        Description:
+          Identifier: Asphalt_Patch_3_Asphalt_Asphalt_Saturation
+          Label: Asphalt_Saturation
+          GuiGroup: Asphalt/Patch 3/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.52
+        NumericalDescription:
+          DefaultValue: 0.52
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166180
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 55
+        Description:
+          Identifier: Asphalt_Patch_3_Asphalt_Asphalt_Lightness
+          Label: Asphalt_Lightness
+          GuiGroup: Asphalt/Patch 3/Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.46
+        NumericalDescription:
+          DefaultValue: 0.46
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166181
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 56
+        Description:
+          Identifier: Asphalt_Contrast
+          Label: Contrast
+          GuiGroup: Asphalt
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.25
+        NumericalDescription:
+          DefaultValue: 0.25
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166182
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 57
+        Description:
+          Identifier: Markings_cracks
+          Label: Cracks Large
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.15
+        NumericalDescription:
+          DefaultValue: 0.15
+          MinValue: 0
+          MaxValue: 3
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166183
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 58
+        Description:
+          Identifier: Markings_cracks_fine
+          Label: Cracks Fine
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.15
+        NumericalDescription:
+          DefaultValue: 0.15
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166184
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 59
+        Description:
+          Identifier: Markings_erosion
+          Label: Erosion
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.5125
+        NumericalDescription:
+          DefaultValue: 0.5125
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166185
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 60
+        Description:
+          Identifier: Markings_detail
+          Label: Detail
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 16
+        NumericalDescription:
+          DefaultValue: 16
+          MinValue: 1
+          MaxValue: 32
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166186
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 61
+        Description:
+          Identifier: Markings_white_yellow
+          Label: Yellow/White
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 4
+          WidgetType: 4
+        Data: 0
+        NumericalDescription:
+          DefaultValue: 0
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166187
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 62
+        Description:
+          Identifier: Markings_smudge
+          Label: Smudge
+          GuiGroup: Markings
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.2
+        NumericalDescription:
+          DefaultValue: 0.2
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166188
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 63
+        Description:
+          Identifier: Markings_Road_Pattern_road_line_width
+          Label: Line Width
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.125
+        NumericalDescription:
+          DefaultValue: 0.125
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166189
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 64
+        Description:
+          Identifier: Markings_Road_Pattern_road_stripes_amount
+          Label: Stripes Amount
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 4
+        NumericalDescription:
+          DefaultValue: 4
+          MinValue: 1
+          MaxValue: 64
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166190
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 65
+        Description:
+          Identifier: Markings_Road_Pattern_road_line_type
+          Label: Visible Lines
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 4
+          WidgetType: 5
+        Data: 3
+        NumericalDescription:
+          DefaultValue: 3
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 3
+          EnumValues:
+          - Value: 1
+            Label: Side
+          - Value: 2
+            Label: Middle
+          - Value: 3
+            Label: Both
+    - rid: 661270027061166191
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 66
+        Description:
+          Identifier: Markings_Road_Pattern_road_double_single_line
+          Label: Double/Single Line
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 4
+          WidgetType: 4
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 0
+          MaxValue: 0
+          SliderStep: 0
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166192
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 67
+        Description:
+          Identifier: Markings_Road_Pattern_road_double_line_distance
+          Label: Double Line Distance
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.05
+        NumericalDescription:
+          DefaultValue: 0.05
+          MinValue: 0
+          MaxValue: 0.2
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166193
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 68
+        Description:
+          Identifier: Markings_Road_Pattern_road_tiling
+          Label: Road Tiling
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 4
+          WidgetType: 1
+        Data: 1
+        NumericalDescription:
+          DefaultValue: 1
+          MinValue: 1
+          MaxValue: 4
+          SliderStep: 1
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 661270027061166194
+      type: {class: SubstanceInputFloat, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 69
+        Description:
+          Identifier: Markings_Road_Pattern_road_tiling_separation
+          Label: Road Rim
+          GuiGroup: Markings/Road Pattern
+          GuiDescription: 
+          Type: 0
+          WidgetType: 1
+        Data: 0.1
+        NumericalDescription:
+          DefaultValue: 0.1
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []

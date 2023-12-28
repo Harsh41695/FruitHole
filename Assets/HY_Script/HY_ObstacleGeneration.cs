@@ -55,8 +55,6 @@ public class HY_ObstacleGeneration : MonoBehaviour
             
         }
         //new spawn logic.
-
-        
     }
     public float CheckEndPointDistance => startPoint.position.z - playerTrans.position.z;
 }
