@@ -346,10 +346,14 @@ public class HY_UIManager : MonoBehaviour
     }
     public void OnUpgradeBtnClick()
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         upgradePanel.SetActive(true);
     }
     public void OnUpgradeCrossBtnClick()
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         upgradePanel.SetActive(false);
 
     }

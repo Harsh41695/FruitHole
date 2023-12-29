@@ -178,5 +178,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fwdSpeed: 700
   life: 2
-  giveDamge: 2
+  giveDamge: 5
   force: 1810

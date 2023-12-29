@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using com.adjust.sdk;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject revivePanel;
     bool canRevivePanelActive=true, startTimer=true;
-
+    [SerializeField]
+    AudioClip clickSound,coinAddSound;
+    bool playsound = true;
     // float coinsUpdater;
 
     private void Awake()
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
         unFitCharacter.SetActive(false);
         isVictory= false;
         isDefeat= false;
+        startTimer = true;
     }
     void Update()
     {
@@ -130,7 +134,12 @@ public class GameManager : MonoBehaviour
     {
         //Win Animation Play. and after some time game over panel will open.
         print("WIN Animation");
-        HY_AudioManager.instance.PlayAudioEffectOnce(winSound);
+        
+        if (playsound == true)
+        {
+            HY_AudioManager.instance.PlayAudioEffectOnce(winSound);
+            playsound = false;
+        }
         isVictory = true;    
         isWon = true;
         if (startTimer == true)
@@ -151,7 +160,7 @@ public class GameManager : MonoBehaviour
         HY_SaveSystem.instance.SaveData("CurrentSizeCoinReq", coinResetVal);
         HY_SaveSystem.instance.SaveData("CurrentSizeLvl", timeResetVal);
 
-        if (time > 5&&startTimer==true)
+        if (time > 5)
         {
            // revivePanel.SetActive(false);
             canGameOverPanelActive = true;
@@ -166,7 +175,11 @@ public class GameManager : MonoBehaviour
     {
         //Loose Animation Will play and after some time game over panel will open.
         print("Loose Animation");
-        HY_AudioManager.instance.PlayAudioEffectOnce(looseSound);
+        if (playsound == true)
+        {
+            HY_AudioManager.instance.PlayAudioEffectOnce(looseSound);
+            playsound=false;
+        }
         isDefeat = true;
         statusTxt.text = status;
         if (startTimer == true)
@@ -175,7 +188,7 @@ public class GameManager : MonoBehaviour
 
         }
         //time= 0;
-        if (time > 5&&startTimer==true)
+        if (time > 5)
         {
 
             canGameOverPanelActive = true;
@@ -188,13 +201,15 @@ public class GameManager : MonoBehaviour
 
     public void NoThanksGameOverBtn()
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+        HY_AudioManager.instance.PlayAudioEffectOnce(coinAddSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         coins += coinsUpdater;
         if (isWon == true)
         {
             currentGameLVL++;
         }
-        //interstitialUnity.instance.ShowAd();
+        interstitialUnity.instance.ShowAd();
     }
 
     public void ReviveNoThanksBtn()
@@ -251,4 +266,9 @@ public class GameManager : MonoBehaviour
     //{
 
     //}
+    public void sendadjusttoken(string token)
+    {
+        AdjustEvent @event = new AdjustEvent(token);
+        Adjust.trackEvent(@event);
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine.Advertisements;
 
 public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    [SerializeField] Button _showAdButton;
+   // [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
     string _adUnitId = null; // This will remain null for unsupported platforms
@@ -58,16 +58,9 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     // Implement a method to execute when the user clicks the button:
     public void ShowAd()
     {
-        // Disable the button:
-        // _showAdButton.interactable = false;
-        // Then show the ad:
-       // REWARDTIMES++;
+       
         Advertisement.Show(_adUnitId, this);
-       // ECCGameController.instance.sendadjusttoken("3aebnp");
-        //if(REWARDTIMES == 1)
-        //{
-        //    _showAdButton.interactable = false;
-        //}
+      
     }
 
     // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
@@ -92,6 +85,9 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
                 case 3:
                     HY_CoinMulitiplier.instance.CoinMultipier();
                     break;
+                case 4:
+                    GameManager.instance.diamonds += 2;
+                    break;
 
             }
             typeOfCaller = -1;
@@ -112,15 +108,10 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         typeOfCaller = -1;
 
         Debug.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
-        // Use the error details to determine whether to try to load another ad.
+        
     }
 
     public void OnUnityAdsShowStart(string adUnitId) { }
     public void OnUnityAdsShowClick(string adUnitId) { }
 
-    void OnDestroy()
-    {
-        // Clean up the button listeners:
-       // _showAdButton.onClick.RemoveAllListeners();
-    }
 }

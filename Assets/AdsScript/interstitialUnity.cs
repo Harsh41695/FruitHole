@@ -36,12 +36,7 @@ public class interstitialUnity : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         // Note that if the ad content wasn't previously loaded, this method will fail
         Debug.Log("Showing Ad: " + _adUnitId);
         Advertisement.Show(_adUnitId, this);
-        //if (!PlayerPrefs.HasKey("firsttime"))
-        //{
-        //   // levelmanager.instance.sendadjusttoken("wwo6g9");
-        //    PlayerPrefs.SetInt("firsttime", 1);
-        //}
-       // levelmanager.instance.sendadjusttoken("q3w67f");
+        
     }
 
     // Implement Load Listener and Show Listener interface methods: 
@@ -72,7 +67,13 @@ public class interstitialUnity : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
        
     }
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showResult) {
-      
+        if (!PlayerPrefs.HasKey("first"))
+        {
+            GameManager.instance.sendadjusttoken("oon4uy");
+            PlayerPrefs.SetInt("first", 1);
+        }
+        GameManager.instance.sendadjusttoken("6y6cp3");
+
     }
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {

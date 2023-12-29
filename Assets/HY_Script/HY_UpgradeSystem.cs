@@ -17,7 +17,7 @@ public class HY_UpgradeSystem : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI timerLVLTxt, powerLvlTxt, sizeLvlTxt;
     int timerLvl=1, powerLvl=1,sizeLvl=1;
-
+   [SerializeField] AudioClip clickSound;
     void Start()
     {
         startTimerCoinNLVL();
@@ -38,6 +38,7 @@ public class HY_UpgradeSystem : MonoBehaviour
         //coins text update
         //text update
         //coin--
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
         GameManager.instance.coins -= startTimerCoins;
         startTimerCoins += 250;
         timerLvl++;
@@ -53,6 +54,8 @@ public class HY_UpgradeSystem : MonoBehaviour
     }
     public void OnTimerDiamndBtn() //Timer Diamond 
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         GameManager.instance.diamonds -= startTimerDiamnd;
         startTimerDiamnd += 20;
         timerLvl++;
@@ -67,6 +70,8 @@ public class HY_UpgradeSystem : MonoBehaviour
     }
     public void OnPowerCoinBtn()
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         GameManager.instance.coins -= startPowerCoins;
         startPowerCoins += 250;
         powerLvl++;
@@ -79,6 +84,8 @@ public class HY_UpgradeSystem : MonoBehaviour
     }
     public void OnPowerDiamndBtn()//Power Diamond
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         GameManager.instance.diamonds -= startPowerDiamnd;
         startPowerDiamnd += 20;
         powerLvl++;
@@ -90,6 +97,8 @@ public class HY_UpgradeSystem : MonoBehaviour
     }
     public void OnsizeCoinBtn()
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         GameManager.instance.coins -= startSizeCoins;
         startSizeCoins += 250;
         sizeLvl++;
@@ -100,6 +109,8 @@ public class HY_UpgradeSystem : MonoBehaviour
     }
     public void OnSizeDiamndBtn()// Size Diamond.
     {
+        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+
         GameManager.instance.diamonds -= startSizeDiamnd;
         startSizeDiamnd += 20;
         sizeLvl++;

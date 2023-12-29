@@ -42,7 +42,7 @@ public class HY_HoleBehaviour : MonoBehaviour
             transform.position.z);
         img.fillAmount = ((float)minPoints / (float)maxPoints);
         targetPos = bPoint;
-        SkinUpdater(HY_SaveSystem.instance.GetSavedData("HoleSkin"));
+        //SkinUpdater(HY_SaveSystem.instance.GetSavedData("HoleSkin"));
         currentTimeScale = 1;
     }
     private void Update()
@@ -114,32 +114,5 @@ public class HY_HoleBehaviour : MonoBehaviour
     {
         size += 0.5f;
         ChangeSize();
-    }
-    void SkinUpdater(int index)
-    {
-        switch (index)
-        {
-            case 1:
-                SkinImg1.gameObject.SetActive(true);
-                SkinImg2.gameObject.SetActive(false);
-                SkinImg3.gameObject.SetActive(false);
-                break;
-            case 2:
-                SkinImg1.gameObject.SetActive(false);
-                SkinImg2.gameObject.SetActive(true);
-                SkinImg3.gameObject.SetActive(false);
-                break;
-            case 3:
-                SkinImg1.gameObject.SetActive(false);
-                SkinImg2.gameObject.SetActive(false);
-                SkinImg3.gameObject.SetActive(true);
-                break;
-            default:
-                SkinImg1.gameObject.SetActive(false);
-                SkinImg2.gameObject.SetActive(false);
-                SkinImg3.gameObject.SetActive(false);
-                break;
-        }
-        HY_SaveSystem.instance.SaveData("HoleSkin", index);
     }
 }
