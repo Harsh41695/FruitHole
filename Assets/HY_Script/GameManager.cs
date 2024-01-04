@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     AudioClip winSound, looseSound;
     [SerializeField]
     GameObject revivePanel;
-    bool canRevivePanelActive=true, startTimer=true;
+    bool startTimer=true;
     [SerializeField]
     AudioClip clickSound,coinAddSound;
     bool playsound = true;
@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
     public void WinCheck()
     {
         //Win Animation Play. and after some time game over panel will open.
-        print("WIN Animation");
+       // print("WIN Animation");
         
         if (playsound == true)
         {
@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour
     public void Loosecheck()
     {
         //Loose Animation Will play and after some time game over panel will open.
-        print("Loose Animation");
+       // print("Loose Animation");
         if (playsound == true)
         {
             HY_AudioManager.instance.PlayAudioEffectOnce(looseSound);

@@ -3,8 +3,8 @@ using UnityEngine.Advertisements;
 
 public class _AdsInit : MonoBehaviour, IUnityAdsInitializationListener
 {
-    [SerializeField] string _androidGameId;
-    [SerializeField] string _iOSGameId;
+    [SerializeField] string _androidGameId= "5507064";
+    [SerializeField] string _iOSGameId= "5507065";
     [SerializeField] bool _testMode = true;
     private string _gameId;
 
@@ -17,14 +17,35 @@ public class _AdsInit : MonoBehaviour, IUnityAdsInitializationListener
     public void InitializeAds()
     {
         _gameId = (Application.platform == RuntimePlatform.IPhonePlayer)
-            ? _iOSGameId
+            ? _iOSGameId 
             : _androidGameId;
+        #region commented code.
+        //_gameId = (Application.platform == RuntimePlatform.IPhonePlayer)
+        //    ? _iOSGameId
+        //    : _androidGameId;
+        //var platform = RuntimePlatform.IPhonePlayer;
+        //if (platform == RuntimePlatform.Android)
+        //{
+        //    _gameId = _androidGameId;
+        //}
+        //else if (platform == RuntimePlatform.IPhonePlayer)
+        //{
+        //    _gameId = _iOSGameId;
+        //}
+        //else
+        //{
+        //    Debug.Log("not valid");
+
+        //}
+        //Debug.Log(platform);
+        #endregion
         Advertisement.Initialize(_gameId, _testMode, this);
+
     }
 
     public void OnInitializationComplete()
     {
-        Debug.Log("Unity Ads initialization complete.");
+        Debug.Log("Unity Ads initialization complete." +_gameId);
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

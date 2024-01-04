@@ -24,7 +24,7 @@ public class HY_ChracterBodyShapeChange : MonoBehaviour
     {
         playersSkin = GetComponent<SkinnedMeshRenderer>();
         rndGenratorNum = Random.Range(0, 2);
-        print(rndGenratorNum);
+       // print(rndGenratorNum);
         if (rndGenratorNum == 0)
         {
             // Means Character is slim, genrate slim bar value.
