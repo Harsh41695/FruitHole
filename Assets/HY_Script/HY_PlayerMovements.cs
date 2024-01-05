@@ -40,7 +40,7 @@ public class HY_PlayerMovements : MonoBehaviour
         
         if (canRun)
         {
-            if(joystickInput.Horizontal>=0.2|| joystickInput.Horizontal <=- 0.2 )
+            if(joystickInput.Horizontal>=0.1f|| joystickInput.Horizontal <=-0.1f )
             {
                 transform.position += (transform.right * joystickInput.Horizontal)
                      .normalized * playerMoveSpeed * Time.deltaTime;

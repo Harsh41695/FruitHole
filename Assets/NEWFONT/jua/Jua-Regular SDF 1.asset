@@ -59,8 +59,8 @@ Material:
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
+    - _GlowInner: 0
+    - _GlowOffset: 0.64
     - _GlowOuter: 0.05
     - _GlowPower: 0.75
     - _GradientScale: 10
@@ -70,7 +70,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.39
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -100,9 +100,9 @@ Material:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _GlowColor: {r: 0, g: 0.14819956, b: 1, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.13363297, g: 0.2000966, b: 0.8584906, a: 1}
+    - _OutlineColor: {r: 0, g: 0.027320892, b: 0.4910209, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Jua-Regular SDF
+  m_Name: Jua-Regular SDF 1
   m_EditorClassIdentifier: 
-  hashCode: -711838984
+  hashCode: -2098541335
   material: {fileID: -7074120673856605738}
-  materialHashCode: 73332312
+  materialHashCode: -723203927
   m_Version: 1.1.0
   m_SourceFontFileGUID: 4226f34ea68602a4d8f049c0c3710be9
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 4226f34ea68602a4d8f049c0c3710be9,

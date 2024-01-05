@@ -20,9 +20,6 @@ public class HY_FireBulletBehaviour : MonoBehaviour
     {
         transform.position += Vector3.forward * fwdSpeed * Time.deltaTime;
        gameObject.GetComponent<Rigidbody>().velocity = Vector3.up * force * Time.deltaTime;
-       // gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * force,ForceMode.VelocityChange); 
-       
-
         Destroy(gameObject, life);
     }
     private void OnTriggerEnter(Collider other)
@@ -31,7 +28,6 @@ public class HY_FireBulletBehaviour : MonoBehaviour
         {
             HY_ChracterBodyShapeChange.instance.takeDamage(giveDamge);
             Destroy(gameObject);
-            print("Called");
         }
     }
    

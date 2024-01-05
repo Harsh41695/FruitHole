@@ -9,7 +9,7 @@ public class HY_HoleBehaviour : MonoBehaviour
     public static HY_HoleBehaviour instance;
 
     [SerializeField]
-    Image img,SkinImg1,SkinImg2,SkinImg3;
+    Image img;
     [SerializeField]
     float minPoints=0, maxPoints=50;
     [SerializeField]
@@ -37,7 +37,7 @@ public class HY_HoleBehaviour : MonoBehaviour
     }
     void Start()
     {
-        transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+        transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
         transform.position = new Vector3(transform.position.x,-0.069f,
             transform.position.z);
         img.fillAmount = ((float)minPoints / (float)maxPoints);

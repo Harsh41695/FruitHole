@@ -56,6 +56,7 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     public void MyShowAd(int typeOfCaller)
     {
         this.typeOfCaller = typeOfCaller;
+        LoadAd();
         ShowAd();
     }
     // Implement a method to execute when the user clicks the button:
