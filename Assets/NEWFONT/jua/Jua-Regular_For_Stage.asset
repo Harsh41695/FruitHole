@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Jua-Regular_For_Stage
   m_EditorClassIdentifier: 
-  hashCode: -2098541335
+  hashCode: 1489112726
   material: {fileID: -7074120673856605738}
-  materialHashCode: -723203927
+  materialHashCode: -1216578442
   m_Version: 1.1.0
   m_SourceFontFileGUID: 4226f34ea68602a4d8f049c0c3710be9
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 4226f34ea68602a4d8f049c0c3710be9,

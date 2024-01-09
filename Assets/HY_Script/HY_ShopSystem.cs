@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+
 public class HY_ShopSystem : MonoBehaviour
 {
     [SerializeField]
@@ -20,7 +22,6 @@ public class HY_ShopSystem : MonoBehaviour
     private void Update()
     {
         ButtonActiveCheck(); 
-        
     }
     public void OnCoinBtn()
     {
@@ -42,9 +43,18 @@ public class HY_ShopSystem : MonoBehaviour
         {
             coinBtn.interactable = false;
         }
-        if (GameManager.instance.diamonds < reqDiamond)
+        else
+        {
+            coinBtn.interactable = true;
+        }
+        if (GameManager.instance.diamonds <reqDiamond)
         {
             diamondBtn.interactable = false;
+        }
+        else
+        {
+            diamondBtn.interactable = true;
+
         }
     }
 }

@@ -82,7 +82,7 @@ public class HY_UIManager : MonoBehaviour
         {
             timeUpPanel.SetActive(true);
             time += Time.deltaTime;
-            //print("If Called");
+            
         }
         else
         {
@@ -90,7 +90,7 @@ public class HY_UIManager : MonoBehaviour
             {
                 timeUpPanel.SetActive(true);
                 time += Time.deltaTime;
-                //print("ElseCalled");
+               
             }
         }
 
@@ -315,12 +315,8 @@ public class HY_UIManager : MonoBehaviour
     public void OnSettingBtnClick()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
-
-        //homeScreenPanel.SetActive(false);
         settingPanel.SetActive(true);
         Time.timeScale = 0;
-        //shopPanel.SetActive(false);
-       // skinPanel.SetActive(false);
     }
     public void OnSettingCrossBtn()
     {
