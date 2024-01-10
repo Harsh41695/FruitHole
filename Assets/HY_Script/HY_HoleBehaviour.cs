@@ -1,5 +1,3 @@
-
-
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,11 +14,8 @@ public class HY_HoleBehaviour : MonoBehaviour
     float playerYAxis;
     [SerializeField]
     float size=0.7f;
-   [SerializeField] float resizeScore=0;
-    int updatePoint;
-    float time;
-    [SerializeField]
-    Transform aPoint, bPoint;
+    [SerializeField] float resizeScore = 0;
+    //float time;
     public Transform targetPos;
     [SerializeField]
     float leftRightMoveSpeed;
@@ -37,11 +32,11 @@ public class HY_HoleBehaviour : MonoBehaviour
     }
     void Start()
     {
-        transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
-        transform.position = new Vector3(transform.position.x,-0.069f,
+        transform.localScale = new Vector3(size, size, size);
+        transform.position = new Vector3(transform.position.x,-0.128f,
             transform.position.z);
         img.fillAmount = ((float)minPoints / (float)maxPoints);
-        targetPos = bPoint;
+       
         //SkinUpdater(HY_SaveSystem.instance.GetSavedData("HoleSkin"));
         currentTimeScale = 1;
     }
@@ -64,13 +59,12 @@ public class HY_HoleBehaviour : MonoBehaviour
                 transform.position.z);
 
         }
-        Time.timeScale += 0.2f;
+        Time.timeScale += 0.3f;
         currentTimeScale = Time.timeScale;
     }
     void FightTimeMovement()
     {
-        //transform.position = Vector3.MoveTowards(transform.position,
-        //    targetPos.position, leftRightMoveSpeed * Time.deltaTime);
+       
         transform.position += Vector3.right * leftRightMoveSpeed * Time.deltaTime;
         if (transform.position.x >= positiveXVal)
         {

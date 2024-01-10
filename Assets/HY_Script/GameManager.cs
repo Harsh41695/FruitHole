@@ -81,48 +81,48 @@ public class GameManager : MonoBehaviour
     }
     public void FitnessStatus(float sliderVal)
     {
-        if (sliderVal >= -40 && sliderVal <= -20)
+        if (sliderVal >= 50 && sliderVal <= 100)
         {
             status = "TOO FAT";
             //200
             coinsUpdater = 200;
 
         }
-        else if (sliderVal >= -21 && sliderVal <= 40)
+        else if (sliderVal >= 15 && sliderVal <= 49)
         {
             status = "FAT";
             //350
             coinsUpdater = 350;
 
         }
-        else if (sliderVal >= 41 && sliderVal <= 49)
+        else if (sliderVal >= 6 && sliderVal <= 14)
         {
             status = "FIT";
             //1000
             coinsUpdater = 1000;
         }
-        else if (sliderVal >= 50 && sliderVal <= 55)
+        else if (sliderVal >= -10 && sliderVal <= 5)
         {
             status = "PERFECT";
             //2000
             coinsUpdater = 2000;
 
         }
-        else if (sliderVal >= 56 && sliderVal <= 70)
+        else if (sliderVal >= -14 && sliderVal <= -9)
         {
             status = "FIT";
             //1000
             coinsUpdater = 1000;
 
         }
-        else if (sliderVal >= 71 && sliderVal <= 100)
+        else if (sliderVal >= -49 && sliderVal <= -15)
         {
             status = "SLIM";
             //350
             coinsUpdater = 350;
 
         }
-        else if (sliderVal >= 101 && sliderVal <= 140)
+        else if (sliderVal >= -100 && sliderVal <= -50)
         {
             status = "TOO SLIM";
             //200

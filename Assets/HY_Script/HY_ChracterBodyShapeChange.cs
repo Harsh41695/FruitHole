@@ -12,7 +12,6 @@ public class HY_ChracterBodyShapeChange : MonoBehaviour
     int rndGenratorNum, rndStartSlimVal, rndStartFatVal;
     [SerializeField]
     AudioClip hitSound;
-  
     private void Awake()
     {
         if (instance == null)
@@ -28,14 +27,14 @@ public class HY_ChracterBodyShapeChange : MonoBehaviour
         if (rndGenratorNum == 0)
         {
             // Means Character is slim, genrate slim bar value.
-            rndStartSlimVal = Random.Range(100, 141);
+            rndStartSlimVal = Random.Range(-100,-40);
             playersSkin.SetBlendShapeWeight(0, rndStartSlimVal);
             fitNessBar.value = rndStartSlimVal;
         }
         if (rndGenratorNum == 1)
         {
             // Means Character is fat, genrate fat bar value.
-            rndStartFatVal = Random.Range(-30, 20);
+            rndStartFatVal = Random.Range(40, 100);
             playersSkin.SetBlendShapeWeight(0, rndStartFatVal);
             fitNessBar.value = rndStartFatVal;
            
@@ -46,5 +45,6 @@ public class HY_ChracterBodyShapeChange : MonoBehaviour
         fitNessBar.value += damageVal;
         playersSkin.SetBlendShapeWeight(0, fitNessBar.value);
         HY_AudioManager.instance.PlayAudioEffectOnce(hitSound);
+        
     }
 }

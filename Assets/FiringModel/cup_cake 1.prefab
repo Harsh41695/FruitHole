@@ -152,3 +152,7 @@ MonoBehaviour:
   life: 2
   giveDamge: -5
   force: 1810
+  vfxCollideParticle: {fileID: 3223031359271505891, guid: 155410a7086d1d34ca48c448dfc33156,
+    type: 3}
+  vfxCollideParticle1: {fileID: 8915500580573861359, guid: 9d11447644b0e0842a7edb034fe1ac72,
+    type: 3}
