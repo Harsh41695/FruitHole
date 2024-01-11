@@ -21,7 +21,7 @@ public class HY_HoleBehaviour : MonoBehaviour
     float leftRightMoveSpeed;
     [SerializeField]
     float positiveXVal=2.5f,negativeXVal=-2.5f;
-    public float currentTimeScale=1;
+   
     float powerLevel=0;
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class HY_HoleBehaviour : MonoBehaviour
         img.fillAmount = ((float)minPoints / (float)maxPoints);
        
         //SkinUpdater(HY_SaveSystem.instance.GetSavedData("HoleSkin"));
-        currentTimeScale = 1;
+        
     }
     private void Update()
     {

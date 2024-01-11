@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
         {
             time += Time.deltaTime;
         }
-        if (time > 5)
+        if (time > 10)
         {
             // revivePanel.SetActive(false);
             canGameOverPanelActive = true;

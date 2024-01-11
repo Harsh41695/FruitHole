@@ -27,6 +27,10 @@ TagManager:
   - ShopCupcake
   - ShopOrange
   - CandyBox
+  - RedPlus
+  - RedMinus
+  - GreenPlus
+  - GreenMinus
   layers:
   - Default
   - TransparentFX

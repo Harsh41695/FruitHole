@@ -235,18 +235,6 @@ public class HY_UIManager : MonoBehaviour
         noThanksBtn.gameObject.SetActive(true);
     }
 
-    //public void OnClickPlayActiveBtn()
-    //{
-    //    // homescreenactive,all btn active false
-    //    HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
-    //    settingPanel.SetActive(false);
-    //    homeScreenPanel.SetActive(false);
-    //    playDeactiveBtn.SetActive(false);
-    //    GameManager.instance.canRun = true;
-    //    GameManager.instance.canSpawn = true;
-    //    GameManager.instance.canCameraMove=true;
-    //    GameManager.instance.canRunSpeedTimer = true;
-    //}
     public void OnPlayAtiveBtnClick()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
@@ -325,7 +313,7 @@ public class HY_UIManager : MonoBehaviour
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
         settingPanel.SetActive(false);
-        Time.timeScale = HY_HoleBehaviour.instance.currentTimeScale;
+        //Time.timeScale = HY_HoleBehaviour.instance.currentTimeScale;
        
     }
 
