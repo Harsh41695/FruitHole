@@ -31,7 +31,7 @@ public class HY_UIManager : MonoBehaviour
     public int minutes = 1;
   
     public float seconds = 60;
-    public bool timeUp = false;
+    public  bool timeUp = false;
     [SerializeField]
     Button junkFoodThrowBtn, fruitThrowBtn,noThanksBtn;
     [SerializeField]
@@ -97,6 +97,7 @@ public class HY_UIManager : MonoBehaviour
        if(time>5)
         {
             timeUpPanel.SetActive(false);
+            Time.timeScale = 1;
             CameraFollow.instance.initialCameraRotation= new Vector3(3f, 0f, 0f);
             CameraFollow.instance.offsetFromPlayer = new Vector3(0f, 5f, -15f);
             fireButtonPanel.SetActive(true);
@@ -234,17 +235,18 @@ public class HY_UIManager : MonoBehaviour
         noThanksBtn.gameObject.SetActive(true);
     }
 
-    public void OnClickPlayActiveBtn()
-    {
-        // homescreenactive,all btn active false
-        HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
-        settingPanel.SetActive(false);
-        homeScreenPanel.SetActive(false);
-        playDeactiveBtn.SetActive(false);
-        GameManager.instance.canRun = true;
-        GameManager.instance.canSpawn = true;
-        GameManager.instance.canCameraMove=true;
-    }
+    //public void OnClickPlayActiveBtn()
+    //{
+    //    // homescreenactive,all btn active false
+    //    HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
+    //    settingPanel.SetActive(false);
+    //    homeScreenPanel.SetActive(false);
+    //    playDeactiveBtn.SetActive(false);
+    //    GameManager.instance.canRun = true;
+    //    GameManager.instance.canSpawn = true;
+    //    GameManager.instance.canCameraMove=true;
+    //    GameManager.instance.canRunSpeedTimer = true;
+    //}
     public void OnPlayAtiveBtnClick()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
@@ -261,6 +263,7 @@ public class HY_UIManager : MonoBehaviour
         GameManager.instance.canRun = true;
         GameManager.instance.canSpawn = true;
         GameManager.instance.canCameraMove = true;
+        GameManager.instance.canRunSpeedTimer = true;
     }
     public void OnPlayDeacvtiveBtnClick()
     {

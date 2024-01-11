@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5934174654038143157}
+  - component: {fileID: -3665449683880737381}
   m_Layer: 0
   m_Name: CandyBoxObj
   m_TagString: Untagged
@@ -34,6 +35,18 @@ Transform:
   - {fileID: 9083174375804021529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3665449683880737381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8967079223308822470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04617ef4934fd27499c1f76730d2ffd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2803957432379017418
 PrefabInstance:
   m_ObjectHideFlags: 0

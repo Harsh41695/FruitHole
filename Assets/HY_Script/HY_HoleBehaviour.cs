@@ -59,8 +59,8 @@ public class HY_HoleBehaviour : MonoBehaviour
                 transform.position.z);
 
         }
-        Time.timeScale += 0.3f;
-        currentTimeScale = Time.timeScale;
+       // Time.timeScale += 0.3f;
+       // currentTimeScale = Time.timeScale;
     }
     void FightTimeMovement()
     {
@@ -92,14 +92,11 @@ public class HY_HoleBehaviour : MonoBehaviour
 
         if (minPoints >= maxPoints)
         {
-            
             if (transform.localScale.y <= 2.5)
             {
                 minPoints= 0;
                 size+=0.3f;
                 ChangeSize();
-               // print(size);
-               
             }
            
         }

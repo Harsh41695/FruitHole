@@ -33,7 +33,10 @@ public class GameManager : MonoBehaviour
     AudioClip clickSound,coinAddSound;
     bool playsound = true;
     // float coinsUpdater;
-
+    public float inGameSpeedTime=0;
+    public bool canRunSpeedTimer=false;
+    [SerializeField]
+    GameObject celebrate1, celebrate2;
     private void Awake()
     {
         if (instance == null)
@@ -63,6 +66,12 @@ public class GameManager : MonoBehaviour
         SavingAllData();
         win_LooseConditionUpdater();
         CheckClaimButtonActive();
+        // FitnessStatus(HY_ChracterBodyShapeChange.instance.fitNessBar.value);
+        DeirectWin(HY_ChracterBodyShapeChange.instance.fitNessBar.value);
+        if (canRunSpeedTimer == true)
+        {
+            InGameSpeed();
+        }
 
     }
     void win_LooseConditionUpdater()
@@ -106,6 +115,7 @@ public class GameManager : MonoBehaviour
             status = "PERFECT";
             //2000
             coinsUpdater = 2000;
+           // WinCheck();
 
         }
         else if (sliderVal >= -14 && sliderVal <= -9)
@@ -130,6 +140,17 @@ public class GameManager : MonoBehaviour
 
         }
     }
+    void DeirectWin(float slider)
+    {
+        if (slider >= -5 && slider <= 5)
+        {
+            status = "PERFECT";
+            //2000
+            coinsUpdater = 2000;
+            HY_UIManager.instance.timeUp = true;
+            WinCheck();
+        }
+    }
     public void WinCheck()
     {
         //Win Animation Play. and after some time game over panel will open.
@@ -140,13 +161,23 @@ public class GameManager : MonoBehaviour
             HY_AudioManager.instance.PlayAudioEffectOnce(winSound);
             playsound = false;
         }
+        celebrate1.SetActive(true);
+        celebrate2.SetActive(true);
         isVictory = true;    
         isWon = true;
         if (startTimer == true)
         {
             time += Time.deltaTime;
         }
-       
+        if (time > 5)
+        {
+            // revivePanel.SetActive(false);
+            canGameOverPanelActive = true;
+            canScorePanelGo = true;
+            startTimer = false;
+            time = 0;
+
+        }
         statusTxt.text = status;
         //Timer coin and LVL
         HY_SaveSystem.instance.SaveData("CurrentTimerCoinReq", coinResetVal);
@@ -158,17 +189,7 @@ public class GameManager : MonoBehaviour
 
         //Size coin and LVL
         HY_SaveSystem.instance.SaveData("CurrentSizeCoinReq", coinResetVal);
-        HY_SaveSystem.instance.SaveData("CurrentSizeLvl", timeResetVal);
-
-        if (time > 5)
-        {
-           // revivePanel.SetActive(false);
-            canGameOverPanelActive = true;
-            canScorePanelGo = true;
-            startTimer = false;
-            time= 0;
-            
-        }
+        HY_SaveSystem.instance.SaveData("CurrentSizeLvl", timeResetVal);    
     }
     
     public void Loosecheck()
@@ -242,7 +263,19 @@ public class GameManager : MonoBehaviour
         cupCakeCount = HY_SaveSystem.instance.GetSavedData("Cupcake");
         diamonds = HY_SaveSystem.instance.GetSavedData("Diamonds");
     }
-   
+    void InGameSpeed()
+    {
+        inGameSpeedTime += Time.deltaTime;
+        if (inGameSpeedTime > 7)
+        {
+            Time.timeScale+=0.3f;
+            if (Time.timeScale > 2.5)
+            {
+                Time.timeScale = 2.5f;
+            }
+            inGameSpeedTime = 0;
+        }
+    }
     void CheckClaimButtonActive()
     {
         if (HY_SaveSystem.instance.GetSavedData("BurgerClaim") == 1)
@@ -262,10 +295,7 @@ public class GameManager : MonoBehaviour
             CupcakeClaimBtn.interactable = false;
         }
     }
-    //public void OnCoinMultiplierBtnClick()
-    //{
 
-    //}
     public void sendadjusttoken(string token)
     {
         AdjustEvent @event = new AdjustEvent(token);

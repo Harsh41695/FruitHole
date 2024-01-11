@@ -15,7 +15,7 @@ public class HY_FireBulletBehaviour : MonoBehaviour
     [SerializeField]
     int force = 150;
     [SerializeField]
-    GameObject vfxCollideParticle, vfxCollideParticle1;
+    GameObject vfxCollideParticle;
     // Update is called once per frame
     void Update()
     {
@@ -28,10 +28,8 @@ public class HY_FireBulletBehaviour : MonoBehaviour
         if (other.tag == "HY_Enemy")
         {
             HY_ChracterBodyShapeChange.instance.takeDamage(giveDamge);
-            Instantiate(vfxCollideParticle,gameObject.transform.position, Quaternion.identity);
+            Instantiate(vfxCollideParticle, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
-   
-
 }

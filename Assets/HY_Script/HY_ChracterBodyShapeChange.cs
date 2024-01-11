@@ -40,6 +40,7 @@ public class HY_ChracterBodyShapeChange : MonoBehaviour
            
         }
     }
+
     public void takeDamage(float damageVal)
     {
         fitNessBar.value += damageVal;

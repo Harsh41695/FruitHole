@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f92f101c75ace5a4cb88d9ad42ac25e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0628374
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f92f101c75ace5a4cb88d9ad42ac25e5,
         type: 3}
@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f92f101c75ace5a4cb88d9ad42ac25e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.1353183
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f92f101c75ace5a4cb88d9ad42ac25e5,
         type: 3}
@@ -185,7 +185,5 @@ MonoBehaviour:
   life: 2
   giveDamge: 2
   force: 1810
-  vfxCollideParticle: {fileID: 3223031359271505891, guid: 155410a7086d1d34ca48c448dfc33156,
-    type: 3}
-  vfxCollideParticle1: {fileID: 8915500580573861359, guid: 9d11447644b0e0842a7edb034fe1ac72,
+  vfxCollideParticle: {fileID: 1318304880720512595, guid: c440f3d6f3de2bc4b8761c5d948c4b1f,
     type: 3}
