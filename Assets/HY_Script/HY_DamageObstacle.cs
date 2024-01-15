@@ -1,20 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HY_DamageObstacle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,15 +9,19 @@ public class HY_DamageObstacle : MonoBehaviour
         {
             case "GreenPlus":
                 HY_UIManager.instance.healthyFood += 50;
+                print(HY_UIManager.instance.healthyFood);
                 break;
             case "GreenMinus":
                 HY_UIManager.instance.healthyFood -= 50;
+                print(HY_UIManager.instance.healthyFood);
                 break;
             case "RedPlus":
                 HY_UIManager.instance.unHealthyFood += 50;
+                print(HY_UIManager.instance.unHealthyFood);
                 break;
             case "RedMinus":
                 HY_UIManager.instance.unHealthyFood -= 50;
+                print(HY_UIManager.instance.unHealthyFood);
                 break;
         }
     }

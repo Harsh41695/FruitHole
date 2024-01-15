@@ -9,12 +9,13 @@ public class HY_UIManager : MonoBehaviour
 
     public int healthyFood,unHealthyFood;
     [SerializeField]
-    TextMeshProUGUI healthyFoodCollectTxt, unHealthyFoodCollectTxt, timerText,
+    TextMeshProUGUI healthyFoodCollectTxt, unHealthyFoodCollectTxt, timerText,collectingHeathyTxt,
+        collectingUnHeathyTxt,
         coinTxt,DiamondTxt,CoinTxtOnDamage,stageTxt;
     [SerializeField]
     GameObject timeUpPanel,fireButtonPanel,homeScreenPanel,settingPanel,
         shopPanel,skinPanel,downPanel,foodSkinPanel,skinChangePanel,gameOverPanel,ScorePanel,
-        upgradePanel,stagePanel;
+        upgradePanel,stagePanel,collectionPanel;
     float time;
     [SerializeField]
     GameObject[] fireHealthyFood, fireUnHealthyFood;
@@ -38,6 +39,7 @@ public class HY_UIManager : MonoBehaviour
     AudioClip clickSound,thorwBtn;
     float coinInFloat,diamondInFloat;
     bool canActivePanel = true;
+    float lastTimeScale;
     private void Awake()
     {
         if (instance == null)
@@ -63,16 +65,18 @@ public class HY_UIManager : MonoBehaviour
         settingPanel.SetActive(false);
         upgradePanel.SetActive(false);
         stagePanel.SetActive(true);
-
+        collectionPanel.SetActive(false);
     }
     void Update()
     { 
         healthyFoodCollectTxt.text = healthyFood.ToString();
+        collectingHeathyTxt.text = healthyFood.ToString();
         if (healthyFood <= 0)
         {
             healthyFood = 0;
         }
         unHealthyFoodCollectTxt.text = unHealthyFood.ToString();
+        collectingUnHeathyTxt.text = unHealthyFood.ToString();
         if (unHealthyFood <= 0)
         {
             unHealthyFood=0;
@@ -97,6 +101,7 @@ public class HY_UIManager : MonoBehaviour
        if(time>5)
         {
             timeUpPanel.SetActive(false);
+            collectionPanel.SetActive(false);
             Time.timeScale = 1;
             CameraFollow.instance.initialCameraRotation= new Vector3(3f, 0f, 0f);
             CameraFollow.instance.offsetFromPlayer = new Vector3(0f, 5f, -15f);
@@ -248,6 +253,7 @@ public class HY_UIManager : MonoBehaviour
         shopPanel.SetActive(false);
         upgradePanel.SetActive(false);
         stagePanel.SetActive(false);
+        collectionPanel.SetActive(true);
         GameManager.instance.canRun = true;
         GameManager.instance.canSpawn = true;
         GameManager.instance.canCameraMove = true;
@@ -307,12 +313,14 @@ public class HY_UIManager : MonoBehaviour
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
         settingPanel.SetActive(true);
+        lastTimeScale = Time.timeScale;
         Time.timeScale = 0;
     }
     public void OnSettingCrossBtn()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(clickSound);
         settingPanel.SetActive(false);
+        Time.timeScale = lastTimeScale;
         //Time.timeScale = HY_HoleBehaviour.instance.currentTimeScale;
        
     }

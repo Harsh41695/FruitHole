@@ -15,7 +15,10 @@ public class HY_Obstacle : MonoBehaviour
    // bool magnetFunctionActive=false;
     [SerializeField]
     AudioClip fallSound;
-    
+    public bool textSpanw=false;
+    [SerializeField] GameObject spawnPoint,txtForSpawn;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +31,7 @@ public class HY_Obstacle : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("HY_Player");
+        spawnPoint = GameObject.FindGameObjectWithTag("TextSpawnPoint");
     }
     private void Update()
     {
@@ -76,7 +80,11 @@ public class HY_Obstacle : MonoBehaviour
             ObjectCollectionPointAdd(gameObject.tag);
             HealthyFoodCount();
             UnhealthyFoodCount();
+            Instantiate(txtForSpawn, spawnPoint.transform.position, Quaternion.identity);
             Destroy(gameObject);
+            //spawn collection text;
+           
+            
         }   
     }
     void MagnetFunc()

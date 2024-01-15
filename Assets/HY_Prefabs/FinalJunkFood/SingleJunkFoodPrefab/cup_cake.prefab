@@ -154,3 +154,7 @@ MonoBehaviour:
   maxYDis: 3
   pointToUpdate: 4
   fallSound: {fileID: 8300000, guid: 6b15cb439ec0629488ad3252bade54f8, type: 3}
+  textSpanw: 0
+  spawnPoint: {fileID: 0}
+  txtForSpawn: {fileID: 2647299331726729214, guid: 52144e685fbe94743ab029695b9716d1,
+    type: 3}

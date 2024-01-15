@@ -31,6 +31,7 @@ TagManager:
   - RedMinus
   - GreenPlus
   - GreenMinus
+  - TextSpawnPoint
   layers:
   - Default
   - TransparentFX
